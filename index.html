@@ -12,6 +12,8 @@
 
     <div class="content">
       <div class="content-inner">
+        <p id="success-message"></p>
+
         <form class="login-form" action="serverEndpoint.php" method="post">
           <h2>Login</h2>
 
@@ -55,5 +57,22 @@
     </div>
 
     <div class="footer">footer</div>
+
+    <script>
+      document
+        .querySelector(".login-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const vorname = document.getElementById("vorname").value;
+
+          const message = document.getElementById("success-message");
+          message.textContent =
+            "Danke für deine Übermittlung, " + vorname + "!";
+          message.style.display = "block";
+
+          this.reset();
+        });
+    </script>
   </body>
 </html>

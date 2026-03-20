@@ -59,3 +59,14 @@ body {
   transform: scale(1);
   cursor: pointer;
 }
+
+#success-message {
+  display: none;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #d4edda;
+  border: 1px solid #28a745;
+  border-radius: 5px;
+  color: #155724;
+  font-weight: bold;
+}

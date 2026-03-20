@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Learn Flexbox</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- falls externes CSS -->
   </head>
 
   <body>
@@ -13,14 +12,32 @@
 
     <div class="content">
       <div class="content-inner">
-        <form class="login-form">
+        <form class="login-form" action="serverEndpoint.php" method="post">
           <h2>Login</h2>
 
           <label for="vorname">Vorname</label>
-          <input type="text" id="vorname" name="vorname" />
+          <input
+            type="text"
+            id="vorname"
+            name="vorname"
+            required
+            minlength="2"
+            maxlength="20"
+            pattern="[A-Za-zÄÖÜäöüß]+"
+            title="Nur Buchstaben, mindestens 2 Zeichen"
+          />
 
           <label for="nachname">Nachname</label>
-          <input type="text" id="nachname" name="nachname" />
+          <input
+            type="text"
+            id="nachname"
+            name="nachname"
+            required
+            minlength="2"
+            maxlength="20"
+            pattern="[A-Za-zÄÖÜäöüß]+"
+            title="Nur Buchstaben, mindestens 2 Zeichen"
+          />
 
           <button type="submit">Absenden</button>
         </form>
